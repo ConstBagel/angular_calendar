@@ -1,0 +1,10 @@
+<list-app [data]="years" [pickItem]="getIndexOfYear()" (val)="onPickYear($event)">
+</list-app>
+<list-app [data]="months" [pickItem]="pickMonth" (val)="onPickMonth($event)">
+</list-app>
+<p><label>Choose team's member:</label></p>
+<list-app [data]="teamMembers" [pickItem]="currentUserId" (val)="onPickTeamMember($event)">
+</list-app>
+<hr>
+<table-app [weekDayName]="weekDay" [month]="calendar">
+</table-app>

@@ -1,0 +1,19 @@
+<div class="table">
+<div class="row">
+    <div class="cell nameWeekDay" *ngFor="let day of weekDayName">{{ day }}</div>
+</div>
+<div class="row" *ngFor="let week of month">
+  <!-- <div class="cell"
+    *ngFor="let item of week"
+    [ngClass]="{'current_month': item._currentMonth, 'current_day': item._currentDate}"
+  > 
+  <h2>{{ item._date }}</h2>-->
+    <cell-app 
+    class="cell" 
+    *ngFor="let item of week"
+    [ngClass]="{'current_month': item._currentMonth, 'current_day': item._currentDate}"
+    [day]="item._date" [dateId]="item._id"
+    ></cell-app>
+  <!-- </div> -->
+</div>
+</div>

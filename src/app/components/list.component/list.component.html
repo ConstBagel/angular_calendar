@@ -1,0 +1,10 @@
+<div>
+    <select (change)="onChangeData(list.value)" #list>
+        <option
+        *ngFor="let item of data; let i = index"
+        [value]="i"
+        [selected]="i === pickItem">
+        {{ item }}
+        </option>
+    </select>
+</div>

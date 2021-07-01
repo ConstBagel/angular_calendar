@@ -1,0 +1,48 @@
+<div *ngIf="data">
+    <p>{{ data.title }}</p>
+    <p>Status: {{ data.status }}</p>
+    <p>Comment: {{ data.text}}</p>
+</div>
+<div *ngIf="data">
+        <button (click)="onEditItem()">Edit Item</button>
+        <button (click)="onDeleteItem(data.id)">Delete Item</button>
+</div>
+<div *ngIf="allowEditor">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div>
+        <label>Choose your status:
+            <select id="status" [(ngModel)]="pickedOption" name="status" (change)="changeStatus()">
+                <option disabled selected>Please pick up status</option>
+                <option
+                *ngFor="let status of statusList"
+                [ngValue]="status">
+                {{status}}
+                </option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label>Choose amount of days:
+            <select id="dayAmount" name="dayAmount" ngModel>
+                <option
+                *ngFor="let amount of daysByStatus"
+                [ngValue]="amount"
+                >
+                {{amount}}
+                </option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label>Add your comment:
+            <textarea name="comment" [ngModel]="data ? data.text : ''"> 
+            </textarea>
+        </label>
+    </div>
+    <button type="submit">{{ data ? 'Edit' : 'Submit' }}</button>
+    <button (click)="onCancel()">Cancel</button>
+    </form>
+</div>
+<!-- <div *ngIf="!data && !isNotPastDate">
+    <h1>Sorry this date are not available anymore</h1>
+</div> -->

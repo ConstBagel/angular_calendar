@@ -1,0 +1,34 @@
+.table {
+  width: 700px;
+  margin: 0 auto;
+}
+.row {
+    border: 1px solid yellow;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+.cell {
+  width: 14%;
+  height: 80px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+.current_month {
+  background-color: yellow;
+}
+.current_day {
+  color: red;
+  font-weight: bold;
+}
+
+.nameWeekDay {
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 70px;
+  background-color: green;
+  color: white;
+}

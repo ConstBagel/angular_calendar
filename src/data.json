@@ -1,0 +1,14 @@
+[{
+    "2019-12-01": [ {
+        "userId": 1,
+        "type": "vovation",
+        "comment": "Bla bla"
+    }],
+    "2019-12-29": [
+        {
+            "userId": 1,
+            "type": "sicklive",
+            "comment": "Go to a dantist"
+        }
+    ]
+}]

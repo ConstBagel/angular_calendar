@@ -1,0 +1,22 @@
+<div (click)="redirectToInfo()">
+<h4>{{ day }}</h4>
+<div *ngIf="data">
+        <span *ngFor="let it of data">
+        {{ it.status }}
+        </span>
+</div>
+</div>
+
+<!-- <div>
+    <div>
+        <h2>List of activities:</h2>
+    </div>
+    <div>
+        <h2>Available actions:</h2>
+        <div>
+            <button>Add new Activities</button>
+            <button>Edit Activities</button>
+            <button>Remove Activities</button>
+        </div>
+    </div>
+</div>-->

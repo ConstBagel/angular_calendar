@@ -1,0 +1,27 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="form-group">
+            <label for="login">Username: </label>
+            <input type="text"
+            class="form-control"
+            id="login"
+            name="login"
+            [(ngModel)]="username.value"
+            required
+            #username>
+        </div>
+        <div class="form-group">
+            <label for="password">Password: </label>
+            <input type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            [(ngModel)]="pass.value"
+            required
+            #pass>
+        </div>
+        <button type="submit">Submit</button>
+        <p class="alert alert-primary"  role="alert"
+        *ngIf="invalid">Your inputted data is not valid. Please try again</p>
+    </form>
+</div>
